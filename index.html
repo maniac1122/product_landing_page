@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/custom-style.css">
+    <style>
+      @media only screen and (max-width: 768px) {
+        /* For mobile phones: */
+        [class*="col-"] {
+          width: 100%;
+        }
+      }
+
+      .flex-container {
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header id="header">
+      <center>
+        <img id="header-img" src="https://cdn.freebiesupply.com/logos/large/2x/shure-logo-png-transparent.png"/>
+        <nav id="nav-bar">
+          <a class="nav-link" href="#learn-more">Learn More</a>
+          <a class="nav-link" href="#request-coupon">Request Coupon</a>
+          <a class="nav-link" href="#buy-on-amazon">Buy at Online Store</a>
+        </nav>
+      </center>
+    </header>
+    <section id="learn-more">
+      <center>
+        <h1>The Shure Microphone of Joe Rogan Experience</h1>
+        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/_IBDvROmdGU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </center>
+    </section>
+    <section id="request-coupon">
+      <center>
+        <h2>Request a Coupon</h2>
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+          <input id="email" type="email" placeholder="you@whatever.com" name="email"></input>
+          <input id="submit" type="submit"></input>
+        </form>
+      </center>
+    </section>
+    <section id="buy-on-amazon">
+      <div class="flex-container">
+        <div><a href="amazon-affiliate-link">Buy on Amazon</a></div>
+        <div><a href="crutchfield-affiliate-link">Buy on Crutchfield</a></div>
+        <div><a href="shure-affiliate-link">Buy on Shure</a></div>
+      </div>
+    </section>
+  </body>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  <script>
+    window.onscroll = function() {myFunction()};
+
+    var header = document.getElementById("header");
+    var sticky = header.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
+  </script>
+</html>
